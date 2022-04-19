@@ -53,7 +53,7 @@
         $content = apply_filters( 'the_content', get_the_content() );
         $content = strip_tags($content); 
 
-        $content = str_replace(array("\n", "\t", "\r"), '', $content);
+        $content = str_replace(array("\n", "\t", "\r"), ' ', $content);
 
         if (empty($address)) {
           $address = $content;
