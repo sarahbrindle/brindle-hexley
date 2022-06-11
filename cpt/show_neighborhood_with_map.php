@@ -79,12 +79,36 @@
           $longitude = $item_map_lat_long_array[1];
 
 
-          $contentString =  '{"id":'.$locationItemNumber.',"category":'.$catNumber.',"name":"'.$locaTitle.'","address":"'.$content.'","map_url":"'.$location_link.'","website":"","lat":"'.$latitude.'","lng":"'.$longitude.'","icon":"cook_dome"}';
+          $contentString =  '{"id":'.$locationItemNumber.',"category":'.$catNumber.',"name":"'.$locaTitle.'","address":"'.$content.'","map_url":"'.$location_link.'","website":"","lat":"'.$latitude.'","lng":"'.$longitude.'","icon":"poi_icon_cook_dome"}';
 
           
           $mapString = $mapString.','.$contentString;
           
     }
+    /* start pin*/
+    
+    $catNumberPin = $catNumber;
+    $locationItemNumberPin = 10000;
+    $locaTitlePin = get_field('company_name_for_map', 'option');
+    $item_map_lat_longPin = get_field('map_center_for_map', 'option');
+    $item_map_lat_long_arrayPin = explode(",",$item_map_lat_longPin);
+    $latitudePin = $item_map_lat_long_arrayPin[0];
+    $longitudePin = $item_map_lat_long_arrayPin[1];
+    $contentPin = get_field('company_address_for_map', 'option');
+    $contentPin = strip_tags($contentPin);
+    $contentPin = str_replace(array("\n", "\t", "\r"), ' ', $contentPin);           
+    $location_linkPin = get_field('company_google_map_location', 'option');
+
+    $contentStringPin =  '{"id":'.$locationItemNumberPin.',"category":'.$catNumberPin.',"name":"'.$locaTitlePin.'","address":"'.$contentPin.'","map_url":"'.$location_linkPin.'","website":"","lat":"'.$latitudePin.'","lng":"'.$longitudePin.'","icon":"poi_icon_hotel"}';
+    $mapString = $mapString.','.$contentStringPin;
+    
+    $mapLatitudeCenter = $latitudePin;
+    $mapLongitudeCenter = $longitudePin;
+    $mapZoom = get_field('zoom_for_map', 'option');
+    $mapDefaultCategory = 6;
+    /*end pin*/
+
+
     $mapString = rtrim($mapString, ',');
     $mapString = ltrim($mapString, ',');
     endwhile; 
@@ -99,14 +123,14 @@
     style: null,
     pois: [<?php echo $mapString;?>],
     companyName: "",
-    defaultCategory: 6,
+    defaultCategory: '<?php echo $mapDefaultCategory;?>',
     assetPath: "assets/",
-    lat: 40.3680622,
-    lng: -104.6016981,
+    lat: '<?php echo $mapLatitudeCenter;?>',
+    lng: '<?php echo $mapLongitudeCenter;?>',
     loadAll: 0,
     loadInfobox: 0,
-    persistPinpoint: 0,
-    defaultMapZoom: 5,
+    persistPinpoint: <?php echo get_field('persist_pin_point', 'option');?>,
+    defaultMapZoom: <?php echo $mapZoom;?>,
     areaHighlight: {
       coordinates: [],
       color: "",
@@ -118,7 +142,15 @@
     }
   }
 </script>
+<script type="text/template" id="main-infobox-template">
+  <div class="map__infobox-modal map__infobox-modal--pinpoint-only">
+    <div class="map__infobox-pinpoint-wrap">
+      <div class="map__infobox-pinpoint-svg"><svg enable-background="new 0 22.4 22.5 22.9" height="22.9" viewBox="0 22.4 22.5 22.9" width="18px" height="18px" xmlns="http://www.w3.org/2000/svg"><g fill="#0C0058"><path d="m12.2 20.9-1.7 2-1.7-2z"/><circle cx="7.5" cy="7.5" r="7.5"/></g></svg></div>
+              <img class="map__infobox-pinpoint-icon map__infobox-pinpoint-icon--in-circle" width="18" height="18" src="<?php echo get_field('map_icon', 'option');?>" alt="map icon" title="Map Icon">
+          </div>
 
+       </div>
+</script>
 <script type="text/template" id="infobox-template">
     <div class='map__infobox-poi'>
     <p class='map__infobox-poi-address'>
@@ -186,6 +218,8 @@
               </g>
           </svg>
       </div>
+
+      
       <?php }?>
     
   </div>

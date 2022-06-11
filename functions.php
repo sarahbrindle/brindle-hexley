@@ -112,3 +112,9 @@ add_filter( 'generate_typography_default_fonts', function( $fonts ) {
 
     return $fonts;
 } );
+
+if( function_exists('acf_add_options_page') ) {
+    
+    acf_add_options_page();
+    
+}
