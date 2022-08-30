@@ -70,8 +70,8 @@
 			$css->add_property( 'color', $generate_settings['form_button_text_color'] );
 
 			$css->set_selector( '.wp-block-button.page-btn-outline > a.wp-block-button__link:hover' );
-			$css->add_property( 'border-color', $generate_settings['form_button_background_color_hover'].'!important' );
-			$css->add_property( 'background-color', $generate_settings['form_button_background_color_hover'].'!important' );
+			$css->add_property( 'border-color', $generate_settings['form_button_background_color'].'!important' );
+			$css->add_property( 'background-color', $generate_settings['form_button_background_color'].'!important' );
 			$css->add_property( 'color', $generate_settings['form_button_text_color_hover'] );
 
 			/*Floorplan Tab Block Button*/

@@ -1,3 +1,15 @@
+jQuery(document).ready(function() {  
+  var windowHeight = jQuery(window).height();
+  var windowWidth = jQuery(window).width();
+  //alert(windowHeight);
+  if(windowWidth>1023){
+          jQuery('.home-banner').css("height", windowHeight);
+          var boxPadding = windowHeight / 3 ;
+          boxPadding = Math.ceil(boxPadding);
+          //jQuery('.home-banner-box').css("margin-top", '-'+boxPadding+'px');
+          jQuery('.home-banner > .gb-inside-container').css("padding-top", boxPadding+"px");
+  }
+});
 jQuery(document).ready(function() {
   jQuery('#masthead').scrollToFixed();
 });

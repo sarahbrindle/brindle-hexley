@@ -6,9 +6,9 @@ Author: Brindle Digital
 Author URI: https://www.brindledigital.com/
 GitHub Theme URI: https://github.com/sarahbrindle/brindle-hexley
 GitHub Branch:    master
-Version: v1.0.4
+Version: v1.0.5
 Template:		 generatepress
-Date:            30-06-2022
+Date:            30-08-2022
 Requires at least: 5.0
 Tested up to: 5.7
 Requires PHP: 7.0
@@ -220,7 +220,7 @@ ul.full-list li {
 }
 
 body .floorplangrid .filters a {
-    display: -webkit-inline-box;
+   /* display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
     -webkit-box-pack: center;
@@ -234,6 +234,23 @@ body .floorplangrid .filters a {
     border: 0;
     outline: none;
     border-radius: 3px;
+    */
+    display: inline-flex;
+    height: 50px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0 40px;
+    border-radius: 5px;
+    border: 0;
+    outline: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+
 }
 
 body .floorplan-inner .floorplan-buttons {
@@ -387,12 +404,13 @@ body .site-info {
     font-size: 14px;
     font-weight: 400;
 }
-
+/*
 body .floorplangrid .filters a {
-    /*font-family: 'Playfair Display', serif;*/
+    font-family: 'Playfair Display', serif;
     font-weight: 400;
     font-size: 20px;
 }
+*/
 
 body .resp-tabs-list li {
     font-family: 'Playfair Display', serif;
@@ -708,7 +726,48 @@ body .main-navigation .main-nav ul.sub-menu li:last-child a:hover {
     /* background-color: var(--contrast-3);
     color: #FFF;*/
 }
+body .vp-filter__style-default .vp-filter__item a {     
+    display: inline-flex;
+    height: 50px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0 40px;
+    border-radius: 5px;
+    border: 0;
+    outline: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+.floorplangrid-wrap {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr))!important;
+    padding: 0;
+}
+.home-banner{
+   /* height: 300px;*/
+}
+body .site-info .footer-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 20px;
+}
 
+body .site-info .footer-bar aside figure {
+    margin: 0 0 0 0;
+}
 /*
 @media(max-width:91px) {
     .neighborhood-container-without-info-box{

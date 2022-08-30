@@ -118,3 +118,15 @@ if( function_exists('acf_add_options_page') ) {
     acf_add_options_page();
     
 }
+
+add_action('admin_head', 'custom_function_name');function custom_function_name() {
+ global $current_user;
+ $user_id = get_current_user_id();
+ if(is_admin()){
+        echo '<style>
+    .editor-styles-wrapper .gb-headline span.rich-text {
+    max-width: 100%;
+    background-color: rgba(0, 0, 255, 0.3);
+}
+    </style>';
+}}
