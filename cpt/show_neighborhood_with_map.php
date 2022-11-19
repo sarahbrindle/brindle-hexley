@@ -1,6 +1,6 @@
   <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/cpt/map/assets/wp-google-map.css">
-  <script>
-      var siteSettings = {"breakpoints":{"xlarge":1680,"large":1380,"medium":1180,"small":980,"fluid":800,"fluid_medium":660,"fluid_small":480,"fluid_xsmall":360},"sticky_header":"desktop_mobile","theme":1};      
+   <script>
+      var siteSettings = {"breakpoints":{"xlarge":1680,"large":1680,"medium":1680,"small":1680,"fluid":1680,"fluid_medium":1680,"fluid_small":1680,"fluid_xsmall":1680},"sticky_header":"desktop_mobile","theme":1};      
       var useSiteAnimations = true;
       var theme = 1;
      var config = jcms = {"siteUrl":""};</script>
