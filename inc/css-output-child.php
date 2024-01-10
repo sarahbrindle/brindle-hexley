@@ -22,7 +22,8 @@
 		        return;
 		    }
 			$css = new GeneratePress_CSS;
-
+			//echo "<pre>";
+			//print_r($generate_settings);
 			/*Top Bar*/
 			$css->set_selector( '.top-bar p' );
 			$css->add_property( 'color', $generate_settings['top_bar_text_color'].'!important' );
@@ -159,7 +160,11 @@
 			$css->set_selector( 'body .gb-container.apartments-tab-container .wp-block-ub-tabbed-content-tab-title-vertical-wrap.active' );
 			$css->add_property( 'color', $generate_settings['form_button_background_color'].'!important' );
 
-
+			/*Vertical Tab Font*/
+			$css->set_selector( '.gb-container.apartments-tab-container .wp-block-ub-tabbed-content-tab-title-vertical-wrap' );
+			$css->add_property( 'font-family', $generate_settings['font_heading_2'].' !important' );
+			$css->add_property( 'font-size', $generate_settings['heading_2_font_size'].'px !important' );
+			$css->add_property( 'font-weight', $generate_settings['heading_2_weight'].' !important' );
 
 			/*Gallery Filter*/
 			$css->set_selector( '.vp-filter__item a' );
