@@ -162,9 +162,9 @@
 
 			/*Vertical Tab Font*/
 			$css->set_selector( '.gb-container.apartments-tab-container .wp-block-ub-tabbed-content-tab-title-vertical-wrap' );
-			$css->add_property( 'font-family', $generate_settings['font_heading_2'].' !important' );
-			$css->add_property( 'font-size', $generate_settings['heading_2_font_size'].'px !important' );
-			$css->add_property( 'font-weight', $generate_settings['heading_2_weight'].' !important' );
+			$css->add_property( 'font-family', $generate_settings['font_heading_3'].' !important' );
+			$css->add_property( 'font-size', $generate_settings['heading_3_font_size'].'px !important' );
+			$css->add_property( 'font-weight', $generate_settings['heading_3_weight'].' !important' );
 
 			/*Gallery Filter*/
 			$css->set_selector( '.vp-filter__item a' );
