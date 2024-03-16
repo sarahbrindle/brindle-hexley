@@ -76,7 +76,7 @@ function register_shortcodes(){
 }
 add_action( 'init', 'register_shortcodes');
 
-include_once(get_stylesheet_directory().'/cpt/neighborhood.php');
+//include_once(get_stylesheet_directory().'/cpt/neighborhood.php');
 
 
 
