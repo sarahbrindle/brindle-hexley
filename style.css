@@ -771,6 +771,34 @@ body .site-info .footer-bar aside figure {
 }
 /*Floor plans centering buttons and plans*/
 ul.filters {  margin-left: 0; }
+/*Multistep Gravityform*/
+.gform_wrapper.gravity-theme .gf_progressbar_percentage.percentbar_blue{
+    background: var(--button-bg-color) !important;
+}
+.lp-form .gform_button, .lp-form .gform_next_button {
+    display: inline-flex!important;
+    align-items: center!important;
+    justify-content: center!important;
+    max-width: 130px!important;
+    max-height: 42px!important;      
+}
+.lp-form .gform_wrapper.gravity-theme .gform_previous_button.button {
+    color: var(--base);
+    background-color: var(--button-bg-over-color);
+    max-width: 130px!important;
+    max-height: 42px!important;    
+}
+
+.lp-form .gform_wrapper.gravity-theme .gfield--type-choice .gfield_checkbox .gchoice {
+  margin-bottom: 10px;
+}
+.lp-form .gform_wrapper.gravity-theme input[type="checkbox"]:where(:not(.gform-theme__disable):not(.gform-theme__disable *):not(.gform-theme__disable-framework):not(.gform-theme__disable-framework *)) {
+  border-radius: 2px;
+  border: 1px solid #6B6B6B;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
 /*
 @media(max-width:91px) {
     .neighborhood-container-without-info-box{
