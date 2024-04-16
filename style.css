@@ -799,6 +799,12 @@ ul.filters {  margin-left: 0; }
   height: 20px;
   flex-shrink: 0;
 }
+.single-floorplans-container-outer{
+    margin-top:125px !important;
+}
+.single-floorplans-container-outer h1{
+    color: var(--base-2);
+}
 /*
 @media(max-width:91px) {
     .neighborhood-container-without-info-box{
