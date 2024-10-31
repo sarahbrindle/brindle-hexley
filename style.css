@@ -6,9 +6,9 @@ Author: Brindle Digital
 Author URI: https://www.brindledigital.com/
 GitHub Theme URI: https://github.com/sarahbrindle/brindle-hexley
 GitHub Branch:    master
-Version: v1.0.10
+Version: v1.0.11
 Template:		 generatepress
-Date:            22-10-2024
+Date:            31-10-2024
 Requires at least: 5.0
 Tested up to: 5.7
 Requires PHP: 7.0
@@ -853,6 +853,11 @@ ul.filters {  margin-left: 0; }
     object-position: center;
 }
 /*Near by slider end*/
+/*Neighborhood button styling start*/
+ul.na-attractions-categories-wrap button.attraction-type-button {
+    height:100% !important;
+}
+/*Neighborhood button styling end*/
 /*
 @media(max-width:91px) {
     .neighborhood-container-without-info-box{
