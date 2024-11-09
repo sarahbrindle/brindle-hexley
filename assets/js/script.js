@@ -11,7 +11,7 @@ jQuery(document).ready(function() {
   }
 });
 jQuery(document).ready(function() {
-  jQuery('#masthead').scrollToFixed();
+  //jQuery('#masthead').scrollToFixed();
 });
 
 jQuery( document ).ready( function( $ ) {
@@ -64,3 +64,18 @@ jQuery( document ).ready( function( $ ) {
         fixedContentPos: false
     });
 });
+
+jQuery( document ).ready( function( e ) {
+    fixedResize(e); 
+});
+jQuery( window ).resize( function( e ) {
+    fixedResize(e); 
+});
+
+function fixedResize(e){
+    var topbarHeight = jQuery(".top-bar").height();
+    //alert(topbarHeight);
+    topbarHeight = topbarHeight-30;
+    //alert(topbarHeight);
+    jQuery('.site-header').css('top', topbarHeight + "px");
+}
